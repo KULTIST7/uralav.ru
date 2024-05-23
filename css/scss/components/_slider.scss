@@ -1,0 +1,115 @@
+.slider {
+    width: 100%;
+    height: 870px;
+    margin-bottom: 90px;
+
+    @media #{$tablet} {
+        height: 540px;
+        margin-bottom: 50px;
+    }
+
+    .swiper {
+        &-slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url(../images/slider-bg.jpg) no-repeat center;
+
+            @media screen and (min-width: 1921px) {
+                background-size: cover;
+            }
+            
+            @media #{$tablet} {
+                background-size: cover;
+                background-position: 75%;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(25.69deg, rgba(0, 0, 0, 0.6) 7.77%, rgba(0, 0, 0, 0) 62.81%);
+                top: 0;
+                left: 0;
+                pointer-events: none;
+            }
+
+            &>div {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                margin-top: auto;
+                padding-bottom: 100px;
+
+                @media #{$tablet} {
+                    padding-bottom: 15px;
+                }
+
+                h1 {
+                    font-family: $font-main;
+                    font-weight: $font-weight-bold;
+                    font-size: 90px;
+                    color: $color-white;
+                    margin-top: auto;
+                    margin-bottom: 10px;
+
+                    @media #{$tablet} {
+                        font-size: 44px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                p {
+                    font-family: $font-second;
+                    font-weight: $font-weight-ultralight;
+                    font-size: 24px;
+                    color: $color-white;
+                    margin-bottom: 40px;
+
+                    @media #{$tablet} {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .btn-shadow {
+                    width: 215px;
+                }
+                
+                .slider__video {
+                    position: absolute;
+                    width: max-content;
+                    height: max-content;
+                    top: 40%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    @media #{$tablet} {
+                        display: none;
+                    }
+
+                    img {
+                        width: 202px;
+                        height: 202px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__arrows {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        height: 55px;
+        transform: translateY(calc(-100% - 18px));
+        z-index: 1;
+        pointer-events: none;
+
+        @media #{$tablet} {
+            transform: translateY(calc(-100% - 15px));
+        }
+    }
+}

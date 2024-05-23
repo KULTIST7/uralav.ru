@@ -1,0 +1,230 @@
+.about {
+    position: relative;
+    margin-bottom: 150px;
+
+    @media #{$tablet} {
+        margin-bottom: 70px;
+    }
+
+    .section-box {
+        display: flex;
+        gap: 6%;
+
+        @media #{$desktop} {
+            gap: 2%;
+        }
+
+        @media #{$tablet} {
+            flex-direction: column;
+            gap: 40px;
+            padding: 0;
+        }
+    }
+
+    &__description {
+        width: 45.7%;
+        margin-top: 70px;
+
+        @media #{$tablet} {
+            width: 100%;
+            height: 374px;
+            margin-top: 30px;
+        }
+
+        &__content {
+            width: calc(100% - 40px);
+            background-color: #FFFFFFF2;
+            padding: 40px 40px 90px;
+            border-radius: 60px 0 60px;
+            margin: 0 auto;
+
+            @media #{$phone} {
+                padding: 25px 20px 35px;
+            }
+
+            img {
+                width: 360px;
+                height: auto;
+
+                @media #{$phone} {
+                    width: 181px;
+                }
+            }
+
+            p {
+                font-family: $font-second;
+                font-weight: $font-weight-regular;
+                line-height: 22px;
+                color: #697F95;
+
+                @media #{$phone} {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        &>img {
+            position: absolute;
+            border-radius: 0 0 60px 0;
+            pointer-events: none;
+            transform: translateX(-114%);
+            top: 100px;
+            left: 50%;
+            z-index: -1;
+
+            @media screen and (min-width: 1985px) {
+                border-radius: 60px 0 60px 0;
+            }
+
+            @media #{$tablet} {
+                width: 100%;
+                height: 404px;
+                border-radius: 0;
+                transform: translateX(0);
+                object-fit: cover;
+                object-position: center;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        width: 48.3%;
+
+        @media #{$desktop} {
+            width: 52.3%;
+        }
+        
+        @media #{$tablet} {
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        gap: 27px;
+
+        @media #{$tablet} {
+            gap: 12px;
+            justify-content: center;
+        }
+
+        &:nth-of-type(even) {
+            @media #{$tablet} {
+                flex-direction: row-reverse;
+                margin-right: 321px;
+            }
+            
+            img {
+                @media #{$tablet} {
+                    right: calc(-100% - 12px);
+                }
+            }
+
+            div {
+                h3, p {
+                    @media #{$tablet} {
+                        text-align: end;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(odd) {
+            @media #{$tablet} {
+                margin-left: 321px;
+            }
+
+            img {
+                @media #{$tablet} {
+                    left: calc(-100% - 12px);
+                }
+            }
+        }
+
+        img {
+            width: auto;
+            height: 175px;
+            border-radius: 20px;
+            aspect-ratio: 309 / 175;
+            object-position: center;
+            object-fit: cover;
+
+            @media #{$desktop} {
+                height: 150px;
+            }
+
+            @media #{$tablet} {
+                position: absolute;
+                height: 175px;
+            }
+        }
+
+        div {
+            @media #{$tablet} {
+                width: 309px;
+                aspect-ratio: 309 / 175;
+            }
+
+            h3 {
+                font-family: $font-second;
+                font-weight: $font-weight-bold;
+                font-size: 20px;
+                line-height: 20px;
+                color: $color-primary-text;
+                margin: 10px 0;
+
+                @media #{$tablet} {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: 630px) {
+                    width: 250px;
+                }
+
+                @media screen and (max-width: 530px) {
+                    width: 200px;
+                }
+                
+                @media screen and (max-width: 450px) {
+                    width: 162px;
+                }
+            }
+
+            p {
+                font-family: $font-second;
+                font-weight: $font-weight-regular;
+                line-height: 20px;
+                color: #97A5B5;
+
+                @media #{$tablet} {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+
+                @media screen and (max-width: 630px) {
+                    width: 250px;
+                }
+
+                @media screen and (max-width: 530px) {
+                    width: 200px;
+                }
+                
+                @media screen and (max-width: 450px) {
+                    width: 162px;
+                }
+            }
+        }
+    }
+}

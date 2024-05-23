@@ -1,0 +1,82 @@
+.burger {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: #75868B4D;
+    backdrop-filter: blur(7.5px);
+    padding: 10px 10px 0 10px;
+    transition: opacity .3s ease-in-out;
+    top: 63px;
+    right: -100%;
+    z-index: 100;
+    opacity: 0;
+
+    @media #{$tablet} {
+        display: flex;
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        background-color: #FFFFFFCC;
+        padding: 30px 60px 55px 25px;
+        border-radius: 0 60px 0 60px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__close-btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        background-color: #FFFFFFE5;
+        border: none;
+        border-radius: 50%;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .menu {
+        margin-bottom: 150px;
+
+        ul {
+            flex-direction: column;
+            gap: 30px;            
+
+            li {
+                padding: 0;
+
+                a {
+                    font-size: 16px;
+                    width: 100%;
+
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .tel {
+        align-items: start;
+        margin-bottom: 28px;
+    }
+    
+    .socials {
+        margin-bottom: 24px;
+    }
+
+    &-open {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+.body-noscroll {
+    overflow-y: hidden;
+}

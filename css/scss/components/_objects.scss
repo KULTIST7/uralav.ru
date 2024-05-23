@@ -1,0 +1,244 @@
+.objects {
+    position: relative;
+    margin-bottom: 120px;
+
+    @media #{$tablet} {
+        margin-bottom: 70px;
+    }
+
+    h2 {
+        margin-bottom: 53px;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        gap: 2.4%;
+        max-width: 1705px;
+        margin-right: 3px;
+        padding: 0 0 221px 80px;
+
+        @media screen and (max-width: 1500px) {
+            padding-bottom: 150px;
+        }
+
+        @media #{$tablet} {
+            flex-wrap: wrap;
+            gap: 2%;
+            padding: 0 25px 40px;
+            margin-right: 0;
+        }
+
+        @media #{$phone} {
+            padding: 0 7px 40px;
+        }
+
+        &__more {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 5px;
+
+            @media #{$tablet} {
+                display: none;
+            }
+        }
+    }
+
+    &__card {
+        position: relative;
+        background-color: $color-white;
+        width: 23%;
+        padding: 31px 34px 0 26px;
+        border-radius: 50px 0 50px 0;
+        transition: all .3s ease-in-out;
+
+        @media screen and (max-width: 1150px) {
+            padding: 20px 20px 0 20px;
+        }
+
+        @media #{$tablet} {
+            width: 49%;
+            padding: 20px 14px 0;
+            border-radius: 40px 0 40px 0;
+            margin-bottom: 60px;
+        }
+
+        @media #{$phone} {
+            width: 100%;
+        }
+
+        &:hover {
+            box-shadow: 0px 4px 60px 0px #00000026;
+            transform: translateY(-25px);
+
+            @media #{$tablet} {
+                transform: translateY(0);
+            }
+
+            a {
+                opacity: 1;
+            }
+        }
+
+        &:nth-last-of-type(2) {
+            @media #{$tablet} {
+                margin-bottom: 0;
+            }
+
+            @media #{$phone} {
+                margin-bottom: 60px;
+            }
+        }
+        
+        &:last-of-type {
+            @media #{$tablet} {
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            font-weight: $font-weight-book;
+            font-size: 65px;
+            color: #535E68;
+
+            @media screen and (max-width: 1400px) {
+                font-size: 50px;
+            }
+
+            @media screen and (max-width: 1150px) {
+                font-size: 40px;
+            }
+
+            @media #{$tablet} {
+                font-size: 35px;
+            }
+        }
+
+        &__text {
+            font-family: $font-second;
+            font-weight: $font-weight-medium;
+            font-size: 14px;
+            line-height: 18px;
+            color: #697F95;
+            margin-bottom: 306px;
+
+            @media screen and (max-width: 1400px) {
+                margin-bottom: 270px;
+            }
+            
+            @media #{$desktop} {
+                line-height: 14px;
+                margin-bottom: 240px;
+            }
+
+            @media screen and (max-width: 1150px) {
+                margin-bottom: 200px;
+            }
+
+            @media #{$tablet} {
+                line-height: 16px;
+                margin-bottom: 250px;
+            }
+
+            @media screen and (max-width: 900px) {
+                margin-bottom: 225px;
+            }
+
+            @media screen and (max-width: 500px) {
+                margin-bottom: 180px;
+            }
+        }
+
+        a {
+            font-family: $font-second;
+            font-weight: $font-weight-medium;
+            position: absolute;
+            width: 173px;
+            line-height: 43px;
+            right: 24px;
+            bottom: 235px;
+            z-index: 1;
+            opacity: 0;
+
+            @media screen and (max-width: 1400px) {
+                bottom: 220px;
+            }
+
+            @media #{$desktop} {
+                bottom: 190px;
+            }
+
+            @media screen and (max-width: 1150px) {
+                bottom: 150px;
+            }
+
+            @media #{$tablet} {
+                bottom: 200px;
+            }
+
+            @media screen and (max-width: 900px) {
+                bottom: 170px;
+            }
+
+            @media #{$phone} {
+                right: 14px;
+            }
+
+            @media screen and (max-width: 500px) {
+                bottom: 126px;
+            }
+        }
+
+        img {
+            position: absolute;
+            width: calc(100% - 34px);
+            border-radius: 50px 0 50px 0;
+            object-fit: cover;
+            aspect-ratio: 349 / 392;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: -136px;
+
+            @media screen and (max-width: 1500px) {
+                bottom: -65px;
+            }
+
+            @media #{$tablet} {
+                width: calc(100% - 28px);
+                aspect-ratio: 332 / 210;
+                bottom: -40px;
+            }
+
+            @media #{$phone} {
+                width: 400px;
+                transform: translateX(0);
+                left: 14px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 331px;
+            }
+
+            @media screen and (max-width: 375px) {
+                width: calc(100% - 28px);
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 660px;
+        object-position: center;
+        object-fit: cover;
+        pointer-events: none;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+}
