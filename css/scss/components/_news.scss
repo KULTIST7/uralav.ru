@@ -1,0 +1,124 @@
+.news {
+    margin-bottom: 60px;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 1.4%;
+
+        @media #{$tablet} {
+            gap: 12px;
+        }
+     }
+        
+    &__block {
+        display: flex;
+        width: 49.3%;
+        aspect-ratio: 688 / 470;
+
+        @media #{$tablet} {
+            width: 100%;
+        }
+
+        &_img {
+            .news__block__img-box {
+                width: 100%;
+                height: auto;
+
+                a {
+                    width: 100%;
+
+                    img {
+                        max-width: none;
+                        width: 100%;
+                    }
+                }
+
+                iframe {
+                    max-width: none;
+                    width: 100%;
+                }
+            }
+        }
+
+        &_text {
+            justify-content: space-between;
+
+            &:nth-of-type(even) {
+                flex-direction: column;
+
+                p {
+                    margin-bottom: 50px;
+
+                    @media #{$tablet} {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            &:nth-of-type(odd) {
+                flex-direction: column-reverse;
+
+                p {
+                    margin-top: 50px;
+
+                    @media #{$tablet} {
+                        margin-top: 25px;
+                    }
+                }
+            }
+
+            p {
+                font-weight: $font-weight-regular;
+                color: $color-primary-text;
+
+                @media #{$tablet} {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+
+            .news__block__img-box {
+                gap: 20px 2.9%;
+
+                @media #{$tablet} {
+                    gap: 12px 2.9%;
+                }
+
+                a {
+                    width: 48.55%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                iframe {
+                    width: 48.55%;
+                }
+            }
+        }
+
+        &__img-box {
+            display: flex;
+            flex-wrap: wrap;
+
+            a {
+                height: max-content;
+                aspect-ratio: 688 / 470;
+
+                img {
+                    height: max-content;
+                    aspect-ratio: 688 / 470;
+                    border-radius: 20px;
+                }
+            }
+
+            iframe {
+                height: max-content;
+                aspect-ratio: 688 / 470;
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -227,4 +227,52 @@
             }
         }
     }
+
+    &_krilya {
+        .about {
+            &__description {
+                margin-top: 0;
+
+                @media #{$tablet} {
+                    position: relative;
+                    height: max-content;
+                }
+
+                h2 {
+                    font-family: $font-main;
+                    font-size: 37px;
+                    line-height: 70px;
+                    color: $color-primary-text;
+
+                    @media #{$tablet} {
+                        display: none;
+                    }
+
+                    span {
+                        color: $color-active-secondary;
+                    }
+                }
+
+                &>img {
+                    @media #{$tablet} {
+                        height: 100%;
+                    }
+                }
+
+                &__content {
+                    @media #{$tablet} {
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        font-family: $font-main;
+                        font-size: 16px;
+                        line-height: 25px;
+                        color: $color-primary-text;
+                    }
+                }
+            }
+        }
+    }
 }

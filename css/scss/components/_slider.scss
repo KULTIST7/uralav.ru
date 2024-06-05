@@ -112,4 +112,26 @@
             transform: translateY(calc(-100% - 15px));
         }
     }
+
+    &_krilya {
+        height: 453px;
+        margin-bottom: 20px;
+
+        @media #{$tablet} {
+            height: 542px;
+            margin-bottom: 0;
+        }
+
+        .swiper {
+            &-slide {
+                &>div {
+                    padding-bottom: 24px;
+
+                    @media #{$tablet} {
+                        padding-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
 }

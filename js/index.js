@@ -40,6 +40,48 @@ $(document).ready(function () {
         }
     });
 
+    let placeSwiper = new Swiper('.place__slider', {
+        loop: true,
+        speed: 750,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: '.place__slider .swiper-button-next',
+            prevEl: '.place__slider .swiper-button-prev'
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        }
+    });
+
+    let InfraSlider = new Swiper('.infrastructure__slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.infrastructure .swiper-button-next',
+            prevEl: '.infrastructure .swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            1150: {
+                slidesPerView: 3
+            },
+            750: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            }
+        }
+    });
+
     $('.header__burger-btn').on('click', () => {
         $('.burger').addClass('burger-open');
         $('body').addClass('body-noscroll');

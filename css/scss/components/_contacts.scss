@@ -1,0 +1,140 @@
+.contacts {
+    position: relative;
+    margin-bottom: 150px;
+
+    @media #{$tablet} {
+        margin-bottom: 57px;
+    }
+
+    &__content {
+        background-color: #FFFFFFCC;
+        padding: 55px 200px 40px 50px;
+        border-radius: 100px 0;
+        z-index: 1;
+
+        @media screen and (max-width: 1500px) {
+            padding: 55px 100px 40px 50px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            padding: 50px 50px 40px;
+        }
+
+        @media #{$tablet} {
+            width: 100%;
+            padding: 25px 16px;
+            border-radius: 40px 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+
+        @media #{$tablet} {
+            margin-bottom: 10px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        img {
+            margin-right: 35px;
+
+            @media #{$tablet} {
+                margin-right: 25px;
+            }
+        }
+
+        &__title, &__text {
+            font-family: $font-second;
+            font-weight: $font-weight-regular;
+            line-height: 22px;
+        }
+
+        &__title {
+            font-size: 14px;
+            color: $color-border;
+        }
+
+        &__text {
+            font-size: 20px;
+            color: $color-primary-text;
+
+            span {
+                color: #A0ACB9;
+            }
+
+            &_tel {
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            &_link {
+                color: $color-active-secondary;
+            }
+        }
+    }
+
+    &__map {
+        position: absolute;
+        width: 1280px;
+        height: auto;
+        border-radius: 60px 0;
+        aspect-ratio: 1280 / 412;
+        top: 35px;
+        right: 0;
+
+        @media screen and (max-width: 1500px) {
+            top: 75px;
+            width: 1000px;
+        }
+
+        @media #{$tablet} {
+            position: relative;
+            width: 100%;
+            height: 412px;
+            padding: 0 25px;
+            top: 0;
+        }
+
+        @media #{$phone} {
+            padding: 0 14px;
+        }
+
+        img:nth-of-type(1) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 60px 0;
+        }
+
+        .cloud {
+            position: absolute;
+            pointer-events: none;
+            max-width: none;
+            width: 898px;
+            height: auto;
+            top: 178px;
+            right: 0;
+
+            @media screen and (max-width: 1500px) {
+                width: 600px;
+                top: 150px;
+            }
+            
+            @media screen and (max-width: 1200px) {
+                width: 500px;
+                top: 200px;
+            }
+
+            @media #{$tablet} {
+                top: 275px;
+            }
+        }
+    }
+}
