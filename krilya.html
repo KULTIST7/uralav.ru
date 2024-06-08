@@ -18,11 +18,11 @@
             <a href="index.html" class="header__logo"><img src="images/svg/logo.svg" alt=""></a>
             <nav class="menu header__menu">
                 <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Наши объекты</a></li>
-                    <li><a href="#">Документы</a></li>
-                    <li><a href="#">Выбрать квартиру</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="objects.html">Наши объекты</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="select.html">Выбрать квартиру</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
             <div class="tel header__tel">
@@ -32,7 +32,7 @@
                     </svg>
                     <span><b>+7 (343)</b>&nbsp;251-99-99</span>
                 </a>
-                <a href="#" class="tel__open-popup">заказать звонок</a>
+                <a href="#" class="tel__open-popup" data-fancybox data-src="#dialog-content">заказать звонок</a>
             </div>
             <button class="header__burger-btn">
                 <span></span>
@@ -51,11 +51,11 @@
             </button>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Наши объекты</a></li>
-                    <li><a href="#">Документы</a></li>
-                    <li><a href="#">Выбрать квартиру</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="objects.html">Наши объекты</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="select.html">Выбрать квартиру</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
             <div class="tel">
@@ -65,7 +65,7 @@
                     </svg>
                     <span><b>+7 (343)</b>&nbsp;251-99-99</span>
                 </a>
-                <a href="#" class="tel__open-popup">заказать звонок</a>
+                <a href="#" class="tel__open-popup" data-fancybox data-src="#dialog-content">заказать звонок</a>
             </div>
             <div class="socials">
                 <a href="#" class="tg">
@@ -118,14 +118,14 @@
             </div>
             <div class="swiper-slide">
                 <div class="section-box">
-                    <h1>ЖК "КРЫЛЬЯ"</h1>
+                    <h2>ЖК "КРЫЛЬЯ"</h2>
                     <p>комфорт и уют  по доступной цене</p>
                     <a href="#" class="btn-shadow">выбрать дом</a>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="section-box">
-                    <h1>ЖК "КРЫЛЬЯ"</h1>
+                    <h2>ЖК "КРЫЛЬЯ"</h2>
                     <p>комфорт и уют  по доступной цене</p>
                     <a href="#" class="btn-shadow">выбрать дом</a>
                 </div>
@@ -419,11 +419,11 @@
             <div class="section-box">
                 <nav class="menu footer__menu">
                     <ul>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Наши объекты</a></li>
-                        <li><a href="#">Документы</a></li>
-                        <li><a href="#">Выбрать квартиру</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="objects.html">Наши объекты</a></li>
+                        <li><a href="docs.html">Документы</a></li>
+                        <li><a href="select.html">Выбрать квартиру</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </nav>
                 <div>
@@ -434,7 +434,7 @@
                             </svg>
                             <span><b>+7 (343)</b>&nbsp;251-99-99</span>
                         </a>
-                        <a href="#" class="tel__open-popup">заказать звонок</a>
+                        <a href="#" class="tel__open-popup" data-fancybox data-src="#dialog-content">заказать звонок</a>
                     </div>
                     <div class="socials">
                         <a href="#" class="tg">
@@ -481,7 +481,21 @@
             </div>
         </div>
     </footer>
+    <div class="call" id="dialog-content" style="display: none;">
+        <h2>Заказать звонок</h2>
+        <form>
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <button class="btn-shadow">заказать</button>
+            <p>нажимая кнопку «заказать», вы принимаете <a href="#">условия передачи</a> указанной информации</p>
+        </form>
+        <div class="call__leaf">
+            <img src="images/order-img-5.jpg" alt="">
+            <img src="images/order-leaf.png" alt="">
+        </div>
+    </div>
     <script src="js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery/jquery.inputmask.min.js"></script>
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <script src="js/fancybox/fancybox.umd.js"></script>
     <script src="js/index.js"></script>

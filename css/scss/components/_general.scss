@@ -53,6 +53,10 @@ form {
         font-size: 14px;
         line-height: 15px;
         color: $color-primary-text;
+
+        a {
+            color: $color-primary-text;
+        }
     }
 }
 
@@ -89,6 +93,7 @@ form {
         border: none;
         border-radius: 25px 0 25px 0;
         transition: all .3s linear;
+        cursor: pointer;
 
         &:hover {
             background: $color-active;

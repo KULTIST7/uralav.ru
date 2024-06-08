@@ -6,8 +6,12 @@
         margin-bottom: 70px;
     }
 
-    h2 {
+    h1, h2 {
         margin-bottom: 53px;
+
+        @media #{$tablet} {
+            margin-bottom: 20px;
+        }
     }
 
     &__content {

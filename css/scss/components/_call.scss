@@ -1,0 +1,99 @@
+.call {
+    position: relative;
+    width: 480px;
+    height: 450px;
+    background: #FFFFFF99;
+    box-shadow: 0px 4px 60px 0px #00000040;
+    padding: 35px 28px 0 45px;
+    border-radius: 0 60px;
+
+    @media #{$phone} {
+        width: 350px;
+        padding: 20px 0 0 15px;
+    }
+
+    h2 {
+        font-size: 70px;
+        line-height: 60px;
+        color: $color-primary-text;
+        max-width: 300px;
+        margin-bottom: 25px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+
+        button {
+            font-family: $font-second;
+            font-weight: $font-weight-medium;
+            margin: 4px 0;
+        }
+    }
+    &__leaf {
+        position: absolute;
+        pointer-events: none;
+        width: 374px;
+        height: auto;
+        aspect-ratio: 374 / 382;
+        top: -25px;
+        right: -90px;
+
+        @media #{$phone} {
+            width: 220px;
+            right: -110px;
+        }
+        
+        img {
+            position: absolute;
+            pointer-events: none;
+            
+            &:nth-of-type(1) {
+                width: 270px;
+                height: 382px;
+                border-radius: 0 60px 60px;
+                top: 0;
+                right: 0;
+                z-index: -1;
+
+                @media #{$phone} {
+                    width: 233px;
+                    height: 330px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                width: 230px;
+                height: auto;
+                aspect-ratio: 230 / 152;
+                top: 105px;
+                left: 0;
+
+                @media #{$phone} {
+                    width: 200px;
+                    top: 87px;
+                    left: -83px;
+                }
+            }
+        }
+    }
+
+    .f-button.is-close-btn {
+        width: 54px;
+        height: 54px;
+        background: #F3F7FAE5;
+        border-radius: 50%;
+        top: -27px;
+        right: -111px;
+
+        svg path {
+            stroke: #333C45;
+        }
+    }
+}

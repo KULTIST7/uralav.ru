@@ -1,0 +1,51 @@
+.nav-chain {
+    position: relative;
+    display: flex;
+    align-items: end;
+    height: 265px;
+    margin-bottom: 40px;
+
+    @media #{$tablet} {
+        height: 170px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom center;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    &__content {
+        width: 100%;
+        height: 50px;
+        background-color: #FFFFFFE5;
+
+        .section-box {
+            align-items: center;
+            gap: 10px;
+            height: 100%;
+
+            a, p {
+                font-weight: $font-weight-regular;
+                font-size: 14px;
+                color: #ADBCCB;
+                text-decoration: none;
+            }
+
+            a {
+                transition: all .1s linear;
+
+                &:hover {
+                    color: $color-primary-text;
+                }
+            }
+        }
+    }
+}

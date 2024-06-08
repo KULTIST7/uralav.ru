@@ -1,9 +1,17 @@
 .contacts {
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 230px;
 
     @media #{$tablet} {
         margin-bottom: 57px;
+    }
+
+    h1, h2 {
+        margin-bottom: 57px;
+
+        @media #{$tablet} {
+            margin-bottom: 20px;
+        }
     }
 
     &__content {
@@ -85,8 +93,8 @@
         height: auto;
         border-radius: 60px 0;
         aspect-ratio: 1280 / 412;
-        top: 35px;
         right: 0;
+        bottom: -76px;
 
         @media screen and (max-width: 1500px) {
             top: 75px;
