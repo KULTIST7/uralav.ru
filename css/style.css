@@ -1679,11 +1679,16 @@ form p a {
   border-radius: 0 60px 0 60px;
   object-fit: cover;
   object-position: center;
+  transition: all 0.3s linear;
+  filter: grayscale(100%);
 }
 @media screen and (max-width: 1279px) {
   .select__mini-slider .swiper-slide img {
     border-radius: 0 40px 0 40px;
   }
+}
+.select__mini-slider .swiper-slide-thumb-active img {
+  filter: none;
 }
 .select__slider {
   position: absolute;

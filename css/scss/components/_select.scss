@@ -244,10 +244,16 @@
                     border-radius: 0 60px 0 60px;
                     object-fit: cover;
                     object-position: center;
+                    transition: all .3s linear;
+                    filter: grayscale(100%);
 
                     @media #{$desktop} {
                         border-radius: 0 40px 0 40px;
                     }
+                }
+
+                &-thumb-active img {
+                    filter: none;
                 }
             }
         }
