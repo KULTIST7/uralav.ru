@@ -3645,7 +3645,8 @@ form p a {
   font-size: 65px;
   line-height: 78px;
   color: #333C45;
-  max-width: 387px;
+  text-wrap: pretty;
+  max-width: 271px;
   text-align: justify;
   margin-bottom: 45px;
 }
